@@ -16,6 +16,10 @@ input.addEventListener("change",function(){
         if(!str){
            
            wrong.innerHTML = "Venga ya, al menos escribe algo."
+            
+            window.parent.postMessage({
+            name: "hideNext"
+        }, "*");
            
            }else{
            
@@ -32,6 +36,10 @@ input.addEventListener("change",function(){
        }else{
            
            wrong.innerHTML = "¿Mike? ¿Qué clase de nombre genérico es ese? Anda, prueba otra vez."
+           
+           window.parent.postMessage({
+            name: "hideNext"
+        }, "*");
            
        }
     
