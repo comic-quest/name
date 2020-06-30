@@ -14,7 +14,7 @@ input.addEventListener("change",function(){
     if(input.value!=="Mike"){
         
         window.parent.postMessage({
-            name: "showNext"
+            name: "nextPage"
         }, "*");
         
         wrong.innerHTML = "";
