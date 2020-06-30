@@ -13,11 +13,21 @@ input.addEventListener("change",function(){
 
     if(input.value!=="Mike"){
         
-        window.parent.postMessage({
+        if(!str){
+           
+           wrong.innerHTML = "Venga ya, al menos escribe algo."
+           
+           }else{
+           
+           window.parent.postMessage({
             name: "nextPage"
         }, "*");
         
         wrong.innerHTML = "";
+           
+           }
+        
+        
        
        }else{
            
